@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp1-deployment-wild
+spec:
+  selector:
+    matchLabels:
+      app: myapp1-wild
+  template:
+    metadata:
+      labels:
+        app: myapp1-wild
+    spec:
+      containers:
+      - name: rakesh-app-wild
+        image: gcr.io/rb-munish-playground/wildimg:latest

@@ -1,0 +1,18 @@
+#Build Docker image
+steps:
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      ["build", "-t", "gcr.io/rb-munish-playground/wildimg:latest", "."]
+
+#Push Docker Image --
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["push", "gcr.io/rb-munish-playground/wildimg:latest"]
+
+#Deploy on K8s
+  - name: "gcr.io/cloud-builders/gke-deploy"
+    args:
+    - run
+    - --filename=deploymentwild.yaml
+    - --image=gcr.io/rb-munish-playground/wildimg:latest
+    - --location=us-central1-c
+    - --cluster=shivam123
