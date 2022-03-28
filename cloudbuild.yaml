@@ -16,3 +16,5 @@ steps:
     - --image=gcr.io/rb-munish-playground/wildimg:latest
     - --location=us-central1-c
     - --cluster=shivam123
+options:
+ logging: CLOUD_LOGGING_ONLY
