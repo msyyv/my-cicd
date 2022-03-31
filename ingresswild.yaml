@@ -9,20 +9,13 @@ spec:
   rules:
   - http:
       paths:
-      # - path: /app2
-      #   pathType: ImplementationSpecific
-      #   backend:
-      #     service:
-      #       name: myapp1-service-wild
-      #       port:
-      #         number: 82
-      - path: /rk
-        pathType: ImplementationSpecific
-        backend:
-          service:
-            name: myapp3-service
-            port:
-              number: 81
+    #  - path: /rk
+    #     pathType: ImplementationSpecific
+    #     backend:
+    #       service:
+    #         name: myapp3-service
+    #         port:
+    #           number: 81
       - path: /*
         pathType: ImplementationSpecific
         backend:
@@ -30,3 +23,10 @@ spec:
             name: myapp1-service-wild
             port:
               number: 82
+      - path: /rk
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: myapp3-service
+            port:
+              number: 81 
