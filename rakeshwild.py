@@ -13,7 +13,7 @@ def rakesh2(text):
 
 @app.route("/")
 def rakesh3():
-    return "Hello! World bhar me jao"
+    return "Hello! how are you"
 
 
 if __name__=='__main__':
